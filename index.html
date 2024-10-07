@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head prefix="og: https://ogp.me/ns#">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HOSPITDESIGN｜ScrollTriggerアニメーション</title>
+    <meta name="description" content="HOSPITDESIGN｜ScrollTriggerアニメーション" />
+    <link rel="icon" type="image/png" href="./assets/img/favicon.webp" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body class="body">
+    <!-- ローディング -->
+    <div class="loading">
+      <span>HOSPITDESIGN</span>
+    </div>
+    <!-- ヘッダー -->
+    <header class="header">
+      <div class="header__inner">
+        <div class="header__logo">HOSPITDESIGN</div>
+        <nav class="header__nav">
+          <ul class="header__list">
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Animation</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <!-- プログレスバー -->
+      <span class="progress-bar"></span>
+      <!-- ビジョン -->
+      <h2 class="title">
+        貴社のWebサイトに<br />
+        目を引くアニメーションを！
+      </h2>
+      <section class="vision">
+        <div class="vision__container">
+          <h3 class="vision__catch">
+            魅力的なWebアニメーションで<br />ユーザーを引きつけましょう
+          </h3>
+          <p class="vision__text">
+            HOSPITDESIGNは、GSAPとScrollTriggerを活用して<br class="hidden-sp">インタラクティブなWebアニメーションを提供いたします。
+          </p>
+        </div>
+        <div class="vision__video">
+          <video
+            muted
+            autoplay
+            playsinline
+            loop
+            src="./assets/img/video.mp4"
+          ></video>
+        </div>
+      </section>
+      <!-- GSAP5つの特徴 -->
+      <h2 class="title">HOSPITDESIGNが<br>出来ること</h2>
+      <div class="slide">
+        <div class="slide__wrapper">
+          <ul class="slide__list">
+            <li class="slide__item">
+              <img
+                width="1100"
+                height="800"
+                loading="lazy"
+                src="./assets/img/image-slide1.webp"
+                alt=""
+              />
+              <div class="slide__container">
+                <span class="slide__subTitle">1 of 4</span>
+                <h3 class="slide__title">CSS設計</h3>
+                <p class="slide__text">
+                  BEMを用いて他の方が見ても理解しやすく<br
+                  class="hidden-sp"
+                />保守・拡張しやすい設計をしております。
+                </p>
+              </div>
+            </li>
+            <li class="slide__item">
+              <img
+                width="1100"
+                height="800"
+                loading="lazy"
+                src="./assets/img/image-slide3.webp"
+                alt=""
+              />
+              <div class="slide__container">
+                <span class="slide__subTitle">2 of 4</span>
+                <h3 class="slide__title">JavaScript</h3>
+                <p class="slide__text">
+                  GSAP + ScrollTriggerやJQueryで<br
+                  class="hidden-sp"
+                />サイト内に動きをつけることが出来ます
+                </p>
+              </div>
+            </li>
+            <li class="slide__item">
+              <img
+                width="1100"
+                height="800"
+                loading="lazy"
+                src="./assets/img/image-slide4.webp"
+                alt=""
+              />
+              <div class="slide__container">
+                <span class="slide__subTitle">3 of 4</span>
+                <h3 class="slide__title">WordPress</h3>
+                <p class="slide__text">
+                  オリジナルデザインのコーディングと<br
+                  class="hidden-sp"
+                />WordPress化まで対応できます
+                </p>
+              </div>
+            </li>
+            <li class="slide__item">
+              <img
+                width="1100"
+                height="800"
+                loading="lazy"
+                src="./assets/img/image-slide2.webp"
+                alt=""
+              />
+              <div class="slide__container">
+                <span class="slide__subTitle">4 of 4</span>
+                <h3 class="slide__title">Figma</h3>
+                <p class="slide__text">
+                  Webデザイン制作のスタンダードになりつつある<br
+                  class="hidden-sp"
+                />Figmaを用いてデザインカンプを制作しております               </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- other -->
+      <section class="feature">
+        <div class="feature__inner">
+          <h2 class="feature__title">
+            GSAP<br />
+            <span class="text-small">with</span><br />
+            HOSPITDESIGN
+          </h2>
+          <p class="feature__text">
+            Lenisライブラリを使用して、スムーズで自然な慣性スクロールを実現することもできます。<br />
+            貴社のWebサイトを次のレベルへと引き上げましょう。<br>お問い合わせをお待ちしております。
+          </p>
+          <a href="#" class="btn-wrap">
+            <span class="btn">ポートフォリオへ行く</span>
+          </a>
+        </div>
+        <span class="feature__background"></span>
+      </section>
+    </main>
+<div class="stalker"></div>
+    <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/CustomEase.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <script src="./assets/js/gsap-script.js" defer></script>
+  </body>
+</html>
