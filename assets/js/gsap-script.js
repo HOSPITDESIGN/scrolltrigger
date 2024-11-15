@@ -51,26 +51,35 @@ let horizontalScroll = gsap.to(".slide__list", {
 });
 
 // 横スクロール中にアニメーション発火
-gsap.utils.toArray(".slide__item").forEach((item) => {
+gsap.utils.toArray(".slide__item").forEach((item, i) => {
   let img = item.querySelector("img");
+  let images = document.querySelectorAll("img");
+
   let contents = item.querySelectorAll(".slide__container > *");
+  let containers = document.querySelectorAll(".slide__container");
+
+  gsap.set(containers[containers.length - 1], { y: 0, autoAlpha: 1 });
+  gsap.set(images[containers.length - 1], { filter: "brightness(50%)" });
+
   let tl = gsap.timeline({
     scrollTrigger: {
       trigger: item,
-      start: "top center",
+      start: "center center",
       containerAnimation: horizontalScroll, //横スクロールするアニメーションTweenを指定
     },
   });
-  tl.fromTo(
-    img,
-    { filter: "brightness(100%)" },
-    { filter: "brightness(50%)" }
-  ).fromTo(
-    contents,
-    { y: 20, autoAlpha: 0 },
-    { y: 0, autoAlpha: 1, stagger: 0.1 },
-    "<"
-  );
+  if (i !== containers.length - 1) {
+    tl.fromTo(
+      img,
+      { filter: "brightness(100%)" },
+      { filter: "brightness(50%)" }
+    ).fromTo(
+      contents,
+      { y: 20, autoAlpha: 0 },
+      { y: 0, autoAlpha: 1, stagger: 0.1 },
+      "<"
+    );
+  }
 });
 
 // 背景の円が広がる
